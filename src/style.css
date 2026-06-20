@@ -1,0 +1,69 @@
+#status {
+  white-space: pre-wrap;
+}
+
+.widgetHidden {
+  display: none;
+}
+
+#widget {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Hurmit Nerd Font Mono";
+  /*background-color: black;*/
+}
+
+#cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vh;
+}
+
+#coverBackground {
+  position: absolute;
+  z-index: -10;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+#title {
+  position: absolute;
+  left: 105vh;
+  top: 5%;
+  font-size: 20vh;
+  color: var(--title-color);
+}
+
+#artists {
+  position: absolute;
+  left: 105vh;
+  top: 30%;
+  font-size: 16vh;
+  color: var(--artists-color);
+}
+
+#album {
+  position: absolute;
+  left: 105vh;
+  bottom: 5%;
+  font-size: 12.5vh;
+  color: var(--album-color);
+}
+
+#track {
+  position: absolute;
+  left: 105vh;
+  bottom: 21.5%;
+  font-size: 10vh;
+  color: var(--track-color);
+}
