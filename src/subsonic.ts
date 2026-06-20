@@ -73,8 +73,12 @@ export async function getCurrentSong(settings: Settings): Promise<Song> {
   const coverUrl = URL.createObjectURL(coverBlob);
 
   let artists: string[] = [];
-  for (const a of song["artists"]) {
-    artists.push(a["name"]);
+  if (typeof song["artists"][Symbol.iterator] === "function") {
+    for (const a of song["artists"]) {
+      artists.push(a["name"]);
+    }
+  } else {
+    artists.push(song["artists"]["name"]);
   }
 
   return {
